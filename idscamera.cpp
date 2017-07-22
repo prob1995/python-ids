@@ -39,8 +39,7 @@ IDSCamera::IDSCamera(int id)
        
         UINT uiCaps = 0;
         // Query if the camera supports autofocus
-        INT nRet = is_Focus (m_handle, FDT_CMD_GET_CAPABILITIES, &uiCaps, sizeof (uiCaps) );
- 
+        INT nRet = is_Focus(m_handle, FDT_CMD_GET_CAPABILITIES, &uiCaps, sizeof (uiCaps));
         if (nRet == IS_SUCCESS && (uiCaps & FOC_CAP_AUTOFOCUS_SUPPORTED))
         {
         //If supported, enable autofocus
